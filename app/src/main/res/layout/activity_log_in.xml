@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.francisgonzales.kotlinfirebaseauth.SignUpActivity">
+    tools:context=".LogInActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/etEmailAddress"
-            android:inputType="textEmailAddress"
             android:hint="@string/email_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,38 +22,28 @@
 
         <EditText
             android:id="@+id/etPassword"
-            android:inputType="textPassword"
             android:hint="@string/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginBottom="16dp"/>
-
-        <EditText
-            android:id="@+id/etConfirmPassword"
             android:inputType="textPassword"
-            android:hint="@string/confirm_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginBottom="16dp"/>
-
-        <Button
-            android:id="@+id/btnSignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/sign_up"
-            android:layout_marginHorizontal="16dp"
-            />
 
         <Button
             android:id="@+id/btnLogin"
+            android:text="@string/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/login"
+            android:layout_marginHorizontal="16dp"
+           />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:text="@string/sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,13 @@
 package com.francisgonzales.kotlinfirebaseauth
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.francisgonzales.KotlinFirebaseAuth.LogInActivity
 import com.francisgonzales.KotlinFirebaseAuth.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -16,6 +18,7 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var etConfirmPassWord: EditText
     private lateinit var etPassword: EditText
     private lateinit var btnSignUp: Button
+    private lateinit var  btnLogin : Button
 
     // create Firebase authentication object
     private lateinit var auth: FirebaseAuth
@@ -27,10 +30,17 @@ class SignUpActivity : AppCompatActivity() {
         etConfirmPassWord = findViewById(R.id.etConfirmPassword)
         etPassword = findViewById(R.id.etPassword)
         btnSignUp = findViewById(R.id.btnSignUp)
+        btnLogin = findViewById(R.id.btnLogin)
         auth = Firebase.auth
         btnSignUp.setOnClickListener{
             signUp()
         }
+        btnLogin.setOnClickListener {
+            val intent = Intent(this, LogInActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
 
     private fun signUp() {
